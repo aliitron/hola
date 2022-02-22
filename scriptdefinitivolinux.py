@@ -313,7 +313,7 @@ for tres in todalaweb:
             # EMPIEZA EL SCRAPPING
 
             # PREPARAR EL NAVEGADOR
-            driver = webdriver.Chrome('./chromedriver.exe')
+            driver = webdriver.Chrome('./chromedriver')
             driver.get("https://www.google.es/maps/?hl=es")
             driver.maximize_window()
 
