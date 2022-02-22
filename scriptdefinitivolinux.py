@@ -297,9 +297,10 @@ cliente.call(taxonomies.GetTerms('category'))
 driver_location = "/usr/bin/chromedriver"
 binary_location = "/usr/bin/google-chrome"
 
-option = webdriver.ChromeOptions()
+options = webdriver.ChromeOptions()
+options.binary_location = binary_location
 
-driver = webdriver.Chrome(executable_path=driver_location, chrome_options=binary_location)
+driver = webdriver.Chrome(executable_path=driver_location, chrome_options=options)
 
 
 for tres in todalaweb:
