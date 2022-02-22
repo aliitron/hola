@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 import requests
@@ -297,10 +298,13 @@ cliente.call(taxonomies.GetTerms('category'))
 driver_location = "/usr/bin/chromedriver"
 binary_location = "/usr/bin/google-chrome"
 
-options = webdriver.ChromeOptions()
-options.binary_location = binary_location
+#options = webdriver.ChromeOptions()
+#options.binary_location = binary_location
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument('--no-sandbox')
 
-driver = webdriver.Chrome(executable_path=driver_location, chrome_options=options)
+driver = webdriver.Chrome(executable_path=driver_location, options=chrome_options)
 
 
 for tres in todalaweb:
