@@ -294,6 +294,15 @@ sitio = "https://comisariadepolicia.es/xmlrpc.php"
 cliente = Client(sitio, usuario, contraseña)
 cliente.call(taxonomies.GetTerms('category'))
 
+driver_location = "/usr/bin/chromedriver"
+binary_location = "/usr/bin/google-chrome"
+
+option = webdriver.ChromeOptions()
+options.binary_location = binary_location
+
+driver = webdriver.Chrome(executable_path=driver_location, chrome_options=options)
+
+
 for tres in todalaweb:
     if tres == policialocal:
         cuerpo = "policialocal"
@@ -313,7 +322,7 @@ for tres in todalaweb:
             # EMPIEZA EL SCRAPPING
 
             # PREPARAR EL NAVEGADOR
-            driver = webdriver.Chrome('./chromedriver')
+     
             driver.get("https://www.google.es/maps/?hl=es")
             driver.maximize_window()
 
