@@ -298,8 +298,9 @@ cliente.call(taxonomies.GetTerms('category'))
 driver_location = "/usr/bin/chromedriver"
 binary_location = "/usr/bin/google-chrome"
 
-chromeOptions.add_argument("--remote-debugging-port=9222")
+
 options = webdriver.ChromeOptions()
+options.add_argument("--remote-debugging-port=9222")
 options.binary_location = binary_location
 
 options.set_headless(True)
