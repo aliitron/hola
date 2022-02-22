@@ -301,8 +301,7 @@ binary_location = "/usr/bin/google-chrome"
 options = webdriver.ChromeOptions()
 options.binary_location = binary_location
 
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--no-sandbox')
+options.set_headless(True)
 
 driver = webdriver.Chrome(executable_path=driver_location, chrome_options=options)
 
