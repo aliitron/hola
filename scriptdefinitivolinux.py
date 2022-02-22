@@ -298,9 +298,8 @@ driver_location = "/usr/bin/chromedriver"
 binary_location = "/usr/bin/google-chrome"
 
 option = webdriver.ChromeOptions()
-options.binary_location = binary_location
 
-driver = webdriver.Chrome(executable_path=driver_location, chrome_options=options)
+driver = webdriver.Chrome(executable_path=driver_location, chrome_options=binary_location)
 
 
 for tres in todalaweb:
