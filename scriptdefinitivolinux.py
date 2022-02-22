@@ -8,7 +8,6 @@ import os
 import re
 from PIL import Image, ImageFont, ImageDraw
 import tkinter as tk
-import pyautogui
 from wordpress_xmlrpc.methods.users import GetUserInfo
 from wordpress_xmlrpc import Client, WordPressPost
 from wordpress_xmlrpc.compat import xmlrpc_client
