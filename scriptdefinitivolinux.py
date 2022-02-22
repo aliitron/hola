@@ -300,7 +300,6 @@ binary_location = "/usr/bin/google-chrome"
 
 options = webdriver.ChromeOptions()
 options.binary_location = binary_location
-driver.capabilities = {"goog:chromeOptions": {"args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage"]}}
 
 options.set_headless(True)
 
